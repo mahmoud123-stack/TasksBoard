@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Index.css" />
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <title>ToDo List</title>
+  </head>
+
+  <body>
+    <div class="popupOverlay hide" id="popupOverlay">
+      <div class="container">
+        <div class="Popup">
+          <form class="">
+            <div class="DataDiv">
+              <div class="TaskInput">
+                <input
+                  type="text"
+                  placeholder="Enter Task Name"
+                  class="form-control"
+                  id="textInput"
+                />
+              </div>
+              <div class="StateInput">
+                <select id="StateInput" class="form-select">
+                  <option selected>Status</option>
+                  <option>Not Started</option>
+                  <option>In Progress</option>
+                  <option>Done</option>
+                </select>
+              </div>
+            </div>
+            <div class="">
+              <select id="PeriorityInput" class="form-select">
+                <option selected>priority</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+              </select>
+            </div>
+            <div class="Btn">
+              <button type="submit" id="popUpBtn" class="btn btn-primary">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="HeaderElement">
+        <h3 class="">ToDo Application</h3>
+        <p id="TaskCount"><span>0</span> Task Remaining</p>
+      </div>
+      <div class="Input">
+        <div class="inputArea">
+          <button id="AddBtn">Add</button>
+        </div>
+        <div class="filter-buttons">
+          <button id="FilterAll" class="Active">All</button>
+          <button id="FilterActive" class="">Active</button>
+          <button id="FilterComxpleted" class="">Done</button>
+        </div>
+      </div>
+      <ul id="TaskList" class="TaskList"></ul>
+    </div>
+    <div class="Footer">
+      <div class="container">
+        <p>Developed By Mahmoud🧡</p>
+      </div>
+    </div>
+    <script src="./todo.js"></script>
+    <script src="./bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+.ToDoList {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.Input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.Input div.inputArea {
+  width: 100%;
+  display: flex;
+  gap: 2%;
+  justify-content: center;
+}
+
+.Input div.inputArea input {
+  padding: 10px;
+  width: 70%;
+  font-size: 16px;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #999;
+}
+
+.Input div.inputArea button {
+  color: white;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 16px;
+  width: 15%;
+  background-color: #3589dc;
+  border: none;
+  border-radius: 3px;
+}
+
+.Input div.filter-buttons {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.filter-buttons button {
+  cursor: pointer;
+  width: 20%;
+  border: none;
+  background-color: transparent;
+  padding: 10px 0;
+  transition: 0.3s linear;
+}
+
+.filter-buttons button.Active {
+  color: #3679bd;
+}
+
+.filter-buttons button:hover {
+  color: #3679bd;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ToDoList {
+  padding-top: 30px;
+}
+
+.HeaderElement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+
+.HeaderElement h3 {
+  font-size: 14px;
+  color: #3589dc;
+  margin: 0;
+}
+
+.HeaderElement p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.HeaderElement p span {
+  color: #3589dc;
+}
+
+.TaskList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 17px;
+  min-height: calc(100vh - 272px);
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.TaskList .Div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.TaskList .Div h5 {
+  margin: 0;
+}
+
+.TaskList li {
+  display: flex;
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 24%;
+  border-radius: 5px;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.BtnsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskInfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  height: 1px;
+}
+
+.TaskList li.Done {
+  opacity: 0.6;
+}
+
+.TaskList li span {
+  font-size: 11px;
+  padding: 2px 5px;
+  border-radius: 20px;
+  background-color: lightgray;
+}
+
+.TaskList li button {
+  background-color: transparent;
+  color: #3589dc;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.4s linear;
+  width: 50%;
+}
+
+.TaskList li button:hover {
+  color: #3a5877;
+}
+
+.Footer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #3589dc78;
+  padding: 10px;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.Footer p {
+  margin: 0;
+}
+
+.popupOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0 0 0 / 60%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popupOverlay .Popup {
+  display: flex;
+  background-color: white;
+  padding: 60px;
+  justify-self: center;
+  border-radius: 20px;
+  width: 60%;
+  transition: 0.5s;
+  transform: translateY(-50%);
+}
+
+.popupOverlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popupOverlay.show .Popup {
+  transform: translateY(0);
+}
+
+.popupOverlay .Popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.popupOverlay .Popup form .DataDiv {
+  display: flex;
+  gap: 20px;
+}
+
+.popupOverlay .Popup form .DataDiv .TaskInput {
+  width: 70%;
+}
+.popupOverlay .Popup form .DataDiv .StateInput {
+  width: 30%;
+}
+
+.popupOverlay .Popup form .Btn {
+  display: flex;
+  justify-content: center;
+}
+
+.popupOverlay .Popup form .Btn button {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .Input div.inputArea {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .Input div.inputArea button {
+    width: 95%;
+  }
+
+  .Input div.inputArea input {
+    width: 95%;
+  }
+
+  .TaskList {
+    flex-direction: column;
+  }
+  .TaskList li {
+    width: 100%;
+  }
+  .popupOverlay.show .Popup {
+    width: 100%;
+    padding: 20px;
+  }
+  .popupOverlay .Popup form .DataDiv {
+    flex-direction: column;
+  }
+  .popupOverlay .Popup form .DataDiv .TaskInput {
+    width: 100%;
+  }
+  .popupOverlay .Popup form .DataDiv .StateInput {
+    width: 100%;
+  }
+}
